@@ -53,7 +53,8 @@ public class IsTree {
         for (int i = 0; i < tokens.length;) {
             if (!map.containsKey(tokens[i])) {
                 map.put(tokens[i].charAt(1),tokens[i].charAt(3));
-                add(tokens[i]);
+                add(String.valueOf(tokens[i].charAt(1)));
+                add(String.valueOf(tokens[i].charAt(3)));
             } else {
                 TreeNodes root = new TreeNodes(tokens[i]);
                 children.add(tokens[i]);
