@@ -98,38 +98,38 @@ public class ValidBST {
         return r.is_bst;
     }
 
-    private Result validate(TreeNode root) {
-        if (root == null) {
-            return new Result(true, Integer.MIN_VALUE, Integer.MAX_VALUE);
-        }
-        Result left = validate(root.left);
-        Result right = validate(root.right);
+//     private Result validate(TreeNode root) {
+//         if (root == null) {
+//             return new Result(true, Integer.MIN_VALUE, Integer.MAX_VALUE);
+//         }
+//         Result left = validate(root.left);
+//         Result right = validate(root.right);
 
-        if (!left.is_bst || !right.is_bst) {
-            return new Result(false, 0, 0);
-        }
+//         if (!left.is_bst || !right.is_bst) {
+//             return new Result(false, 0, 0);
+//         }
 
-        if (root.left != null && left.maxVal > root.val || root.right != null && right.minVal <= root.val) {
-            return new Result(false, 0, 0);
-        }
-        return new Result(true, Math.max(root.val, right.maxVal), Math.min(root.val, left.minVal));
+//         if (root.left != null && left.maxVal > root.val || root.right != null && right.minVal <= root.val) {
+//             return new Result(false, 0, 0);
+//         }
+//         return new Result(true, Math.max(root.val, right.maxVal), Math.min(root.val, left.minVal));
 
-    }
+//     }
 
-}
+// }
 
-class Result {
+// class Result {
 
-    boolean is_bst;
-    int maxVal, minVal;
+//     boolean is_bst;
+//     int maxVal, minVal;
 
-    Result(boolean is_bst, int maxVal, int minVal) {
-        this.is_bst = is_bst;
-        this.maxVal = maxVal;
-        this.minVal = minVal;
-    }
+//     Result(boolean is_bst, int maxVal, int minVal) {
+//         this.is_bst = is_bst;
+//         this.maxVal = maxVal;
+//         this.minVal = minVal;
+//     }
 
-}
+// }
 
 class TreeNode {
 
