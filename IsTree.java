@@ -48,7 +48,7 @@ public class IsTree {
 
     String SExpression(String nodes) {
         ArrayList children = new ArrayList<>();
-        String[] tokens = nodes.split("()");
+        String[] tokens = nodes.split(" ");
         Map<String, String> map = new HashMap<>();
         for (int i = 0; i < tokens.length;) {
             if (!map.containsKey(tokens[i])) {
