@@ -53,19 +53,32 @@ public static void main(String[] args) {
         System.out.println();
         //Difference K
 
-        int pairCount = 0;
+       int pairCount = 0;
         int[] result;
-        for (int i = 0; i < list.length; i++) {
-            int x = list[i];
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < a.length; i++) {
+            int x = a[i];
+            //   
+            //check duplicate
+            if (!map.containsKey(x)) {
+                map.put(x, i);
+            } else {
+                System.out.println("input must be distinct");
+                return 0;
+            }
+        }
+        for (int j = 0; j < a.length; j++) {
+            int x = a[j];
             if (map.containsKey(x + k)) {
-                continue;
+            //    continue;
+
             }
             if (map.containsKey(x - k)) {
                 //   result = new int[]{map.get(a[i]),i};
                 //   System.out.println(result);
                 pairCount++;
             }
-            map.put(x, i);
+           // map.put(x, i);
         }
         System.out.println("total number of pairs for difference" + k + " is " + pairCount);
 
