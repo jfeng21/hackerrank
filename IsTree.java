@@ -52,7 +52,7 @@ public class IsTree {
         Map<String, String> map = new HashMap<>();
         for (int i = 0; i < tokens.length;) {
             if (!map.containsKey(tokens[i])) {
-                map.put(tokens[i++], tokens[i++]);
+                map.put(tokens[i].charAt(1),tokens[i].charAt(3));
                 add(tokens[i]);
             } else {
                 TreeNodes root = new TreeNodes(tokens[i]);
