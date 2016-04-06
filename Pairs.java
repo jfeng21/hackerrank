@@ -56,17 +56,6 @@ public static void main(String[] args) {
        int pairCount = 0;
         int[] result;
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < a.length; i++) {
-            int x = a[i];
-            //   
-            //check duplicate
-            if (!map.containsKey(x)) {
-                map.put(x, i);
-            } else {
-                System.out.println("input must be distinct");
-                return 0;
-            }
-        }
         for (int j = 0; j < a.length; j++) {
             int x = a[j];
             if (map.containsKey(x + k)) {
