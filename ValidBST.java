@@ -39,14 +39,14 @@ public class ValidBST {
                 preOrder[j] = Integer.parseInt(number[j]);
                 bst.insert(preOrder[j]);
                 output.add(preOrder[j]);
-                size--;
+               
             }
             if (output.toString().equalsIgnoreCase(bst.printPre())) {
                 System.out.println("Yes");
             } else {
                 System.out.println("No");
             }
-
+ size--;
         }
     }
 
